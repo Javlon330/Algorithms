@@ -1,6 +1,6 @@
 # def BinSearch(search_array,son):
 #     """ Binary Search log2(n) ikkilik qidiruv tizimi """
-#     L = 0
+      L = 0
 #     H = len(search_array)-1
 #     m = int((L + H) / 2)
 #     while search_array[m] != son:
