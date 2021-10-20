@@ -1,5 +1,21 @@
+from random import randrange
 def quickSort(array):
     """Quick Sort O (nlog2N) vaqtda ishlaydi"""
+    if len(array)<2:
+        return array
+    else:
+        pivot = array.pop(randrange(len(array)))
+        kichik = [i for i in array if i<=pivot]
+        katta = [i for i in array if i> pivot]
+        return quickSort(kichik) + [pivot] + quickSort(katta)
+
+
+array_numbers = [1, 4, 5, 7, 3, 4, 6, 8,  0, 6, 4, 3, 4,11,12,3]
+print(array_numbers)
+print(quickSort(array_numbers))
+
+
+
 
 
 
@@ -14,7 +30,7 @@ def quickSort(array):
 #                 numbers[i] = numbers[j]
 #                 numbers[j] = k
 #     print(numbers)
-array_numbers = [1, 4, 5, 7, 3, 4, 6, 8,  0, 6, 4, 3, 4,11,12,3]
+
 # del array_numbers[0]
 # print(array_numbers)
 # print("Sorted in :")
